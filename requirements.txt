@@ -1,0 +1,5 @@
+tensorflow==2.13.1
+tfx==1.14.0
+tensorflow-transform==1.14.0
+pandas
+tensorflow-hub
