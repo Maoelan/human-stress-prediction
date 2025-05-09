@@ -24,8 +24,7 @@ TunerFnResult = NamedTuple("TunerFnResult", [
 ])
 
 
-def input_fn(file_pattern, tf_transform_output, num_epochs,
-            batch_size=BATCH_SIZE) -> tf.data.Dataset:
+def input_fn(file_pattern, tf_transform_output, num_epochs, batch_size=BATCH_SIZE) -> tf.data.Dataset:
     transform_feature_spec = tf_transform_output.transformed_feature_spec().copy()
     dataset = tf.data.experimental.make_batched_features_dataset(
         file_pattern=file_pattern,
